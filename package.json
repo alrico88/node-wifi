@@ -14,13 +14,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/alrico88/node-wifi.git"
+		"url": "git://github.com/alrico88/node-wifi-dualband.git"
 	},
 	"keywords": ["wifi", "multiplatform"],
 	"author": "Alberto Rico",
 	"license": "LGPL-3.0",
 	"bugs": {
-		"url": "https://github.com/alrico88/node-wifi/issues"
+		"url": "https://github.com/alrico88/node-wifi-dualband/issues"
 	},
 	"dependencies": {
 		"command-line-args": "^3.0.1",

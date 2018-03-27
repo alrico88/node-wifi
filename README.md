@@ -1,8 +1,6 @@
-# node-wifi-dualband-dualband
+# node-wifi-dualband
 
 **I am looking for maintainers who could help me to handle all improvements and bug fixes about this project because the hardware/os dependencies make it quite hard to test.**
-
-![node-wifi-dualband](https://raw.githubusercontent.com/friedrith/assets/master/node-wifi-dualband/logo.png)
 
 The node-wifi-dualband module allows mac, windows and linux users to interact with surrounding wifi networks through various methods.
 
