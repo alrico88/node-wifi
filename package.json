@@ -1,6 +1,6 @@
 {
 	"name": "node-wifi-dualband",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "NodeJS tool to manage wifi",
 	"bin": {
 		"wifi": "bin/wifi.js"
