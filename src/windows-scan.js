@@ -40,9 +40,11 @@ function scanWifi(config, callback) {
 			for (i = 0; i < numNetworks; i++) {
 				let foundBssids = bssidsPosition(networksTmp[i]);
 
-				for (let bssid of foundBssids) {
-					network = parse(networksTmp[i], bssid);
-					networks.push(network);
+				if (foundBssids.length > 0) {
+					for (let bssid of foundBssids) {
+						network = parse(networksTmp[i], bssid);
+						networks.push(network);
+					}
 				}
 			}
 
@@ -63,15 +65,21 @@ function bssidsPosition(array) {
 	return result;
 }
 
-function parse(networkTmp) {
+function parse(networkTmp, bssidPosition) {
 	var network = {};
 
 	network.mac = networkTmp[bssidPosition].match(/.*?:\s(.*)/)[1];
 	network.bssid = network.mac;
 	network.ssid = networkTmp[0].match(/.*?:\s(.*)/)[1];
-	network.channel = parseInt(networkTmp[bssidPosition + 3].match(/.*?:\s(.*)/)[1], );
-	network.frequency = parseInt(networkUtils.frequencyFromChannel(network.channel), );
-	network.signal_level = networkUtils.dBFromQuality(networkTmp[bssidPosition + 1].match(/.*?:\s(.*)/)[1], );
+	network.channel = parseInt(
+		networkTmp[bssidPosition + 3].match(/.*?:\s(.*)/)[1],
+	);
+	network.frequency = parseInt(
+		networkUtils.frequencyFromChannel(network.channel),
+	);
+	network.signal_level = networkUtils.dBFromQuality(
+		networkTmp[bssidPosition + 1].match(/.*?:\s(.*)/)[1],
+	);
 	network.security = networkTmp[2].match(/.*?:\s(.*)/)[1];
 	network.security_flags = networkTmp[3].match(/.*?:\s(.*)/)[1];
 	network.mode = 'Unknown';
