@@ -1,19 +1,3 @@
-# Version 1.2.3
+# Version 0.0.1
 
-* improve environment variables management
-* correct bug disconnection #9
-* correct bug #7
-
-# Version 1.2.4
-
-* fixed bug introduced during #7 fix
-
-# Version 1.2.5
-
-* fixed bug #13
-
-# Version 2.0.0
-
-* add disconnection feature on windows (issue #16)
-* add new fields in scan results (bssid equals to mac, channel, security_flags)
-* improve stability of linux scan
+* Modified Windows parser to detect more than one BSSIDs under a same SSID
