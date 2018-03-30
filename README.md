@@ -1,12 +1,10 @@
 # node-wifi-dualband
 
-**I am looking for maintainers who could help me to handle all improvements and bug fixes about this project because the hardware/os dependencies make it quite hard to test.**
-
 The node-wifi-dualband module allows mac, windows and linux users to interact with surrounding wifi networks through various methods.
 
 These methods include scanning for wifi access points and connecting to these access points.
 
-We wish to be clear in saying that this module is inspired from [node-wifi-control](https://github.com/msolters/wifi-control-node) but with some slight modifications to certain functions such as the various OS-specific parsers for terminal output as we noticed that these parsers did not work well on certain operating systems.
+This module is a fork of [node-wifi](https://github.com/friedrith/node-wifi) but with some slight modifications to parse dualband Routers correctly under all operating systems. Each band will appear as independent.
 
 The module manages :
 
